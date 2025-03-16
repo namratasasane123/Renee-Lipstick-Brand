@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RENEE Lipstick Brand</title>
+  <style>
+    
+    /* General styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      background-color: #222;
+    }
+    /* Animated Heading */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animated-heading {
+      font-size: 3.5rem;
+      font-weight: bold;
+      text-align: center;
+      margin: 20px 0;
+      color: #e40046;
+      animation: fadeIn 3s ease-in-out;
+    }
+    
+      /* Background Video */
+      .video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .video-container video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    header {
+      background-color: rgba(18, 17, 17, 0.8);
+      padding: 20px;
+      text-align: center;
+    }
+
+    header nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    header nav ul li {
+      margin: 0 15px;
+    }
+
+    header nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+
+    header nav ul li a:hover {
+      color: #e40046;
+    }
+
+/* Slideshow Container */
+.slideshow-container {
+  position: relative;
+  width: 70%;
+  max-width: 800px;
+  height: 60vh;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Individual Slides */
+.slide {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* Slide Images */
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Slide Text */
+.text {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.8rem;
+  color: white;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Fade Animation */
+.fade {
+  animation: fadeEffect 1.5s ease-in-out;
+}
+
+@keyframes fadeEffect {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+
+/* Navigation Buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  font-size: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.prev:hover, .next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Dots for Slide Navigation */
+.dots-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 5px;
+  background-color: #bbb;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.dot.active, .dot:hover {
+  background-color: #e40046;
+}
+#home {
+  padding-top: 300px;
+}
+/* Slideshow Container */
+.slideshow-container {
+  position: relative;
+  width: 50%;
+  height: 50vh;
+  background-color: #333;
+  overflow: hidden;
+  margin: 200px auto 50px; /* Moves the slideshow lower */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Individual Slides */
+.slide {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Slide Images */
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Slide Text */
+.text {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.8rem;
+  color: white;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Fade Animation */
+
+/* Animated Heading */
+.animated-heading {
+    font-size: 50px;
+    font-weight: bold;
+    color: #ff4081;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 5px;
+    opacity: 0;
+    animation: fadeInExpand 2s ease-in-out forwards;
+}
+
+/* Subtitle */
+.animated-heading + p {
+    text-align: center;
+    font-size: 20px;
+    color: #efecec;
+    opacity: 0;
+    animation: fadeIn 3s ease-in-out 1.5s forwards;
+}
+
+/* Keyframe Animations */
+@keyframes fadeInExpand {
+    0% {
+        opacity: 0;
+        letter-spacing: 2px;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        letter-spacing: 10px;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+    /* Shop Section */
+#Shopping {
+    text-align: center;
+    padding: 50px;
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+    white-space: nowrap; /* Prevent items from wrapping */
+}
+
+/* Product Container */
+.product-container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping to the next line */
+    gap: 20px;
+    justify-content: center; /* Align items to the left */
+    overflow-x: auto; /* Enable scrolling if needed */
+    padding-bottom: 10px; /* Prevent scrollbar overlap */
+}
+
+/* Product Card */
+.product-card {
+   
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease-in-out;
+    flex: 0 0 auto; /* Prevent shrinking */
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+/* Product Image */
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+    display: inline-block;
+    background: linear-gradient(45deg, #ff4081, #ff80ab);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(255, 64, 129, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+.add-to-cart:hover {
+    background: linear-gradient(45deg, #ff80ab, #ff4081);
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(255, 64, 129, 0.5);
+}
+
+.add-to-cart:active {
+    transform: scale(0.98);
+    box-shadow: 0px 2px 5px rgba(255, 64, 129, 0.3);
+}
+
+.add-to-cart:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+
+
+/* Slide-in Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ensure images fit properly */
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+  
+    .about-box {
+      background: #333;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      margin: 40px auto;
+      max-width: 800px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      animation: slideIn 1.5s ease-out;
+    }
+    .about-box h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #ff4081;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: glowText 2s ease-in-out 0.5s forwards;
+}
+
+/* Paragraph Animation */
+.about-box p {
+    font-size: 20px;
+    color: #f7e9e9;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out 1s forwards;
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glowText {
+    0% {
+        opacity: 0;
+        text-shadow: 0px 0px 5px rgba(255, 64, 129, 0.3);
+    }
+    100% {
+        opacity: 1;
+        text-shadow: 0px 0px 15px rgba(255, 64, 129, 0.5);
+    }
+}
+
+/* Animated Contact Box */
+.contact-box {
+      background: #444;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      margin: 20px auto;
+      max-width: 400px;
+      text-align: center;
+      animation: slideUp 1.5s ease-in-out;
+    }
+    
+
+    /* 2D Star Animation */
+    @keyframes floatStars {
+      0% { transform: translateY(0); opacity: 1; }
+      50% { opacity: 0.5; }
+      100% { transform: translateY(-20px); opacity: 0; }
+    }
+    .star {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #e40046;
+      border-radius: 50%;
+      opacity: 0;
+      animation: floatStars 2s linear infinite;
+    }
+
+    /* Counter Styling */
+    .counter {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-top: 20px;
+      color: #e40046;
+    }
+
+/* Chatbox Styling */
+.chatbox {
+  position: fixed;
+  left: 10px; /* Hidden by default */
+  bottom: 50px;
+  width: 280px;
+  background: #333;
+  color: white;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: left 0.5s ease-in-out;
+}
+
+/* Header */
+.chatbox-header {
+  background: #e40046;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Chat Body */
+.chatbox-body {
+  height: 100px;
+  overflow-y: auto;
+  padding: 10px;
+  background: #444;
+}
+
+/* Footer */
+.chatbox-footer {
+  display: flex;
+  padding: 10px;
+  background: #222;
+}
+
+.chatbox-footer input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+}
+
+.chatbox-footer button {
+  background: #e40046;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.chatbox-footer button:hover {
+  background: #d0003a;
+}
+
+/* Message Styling */
+.message {
+  background: #555;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 2px;
+  width: fit-content;
+  max-width: 50%;
+}
+
+.user-message {
+  background: #e40046;
+  align-self: flex-end;
+}
+
+/* Open state */
+.chatbox.open {
+  left: 10px;
+}
+
+    
+    /* Footer */
+    footer {
+      background-color: #111;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    footer .socials a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    footer .socials a:hover {
+      color: #e40046;
+    }
+    /* Special Offer Box */
+.offer-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: rgb(235, 238, 240);
+  color: #e40046;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  z-index: 1000;
+  transition: transform 0.4s ease-in-out;
+}
+
+.offer-box.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.offer-content h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.offer-content p {
+  font-size: 1.4rem;
+}
+
+.offer-content button {
+  padding: 10px 20px;
+  background: #e40046;
+  color: rgb(38, 36, 36);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.offer-content button:hover {
+  background: #d0003a;
+}
+
+/* Holi Animation */
+.holi-animation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+@keyframes holiBurst {
+  0% { opacity: 0; transform: scale(0); }
+  50% { opacity: 1; transform: scale(1.5); }
+  100% { opacity: 0; transform: scale(2); }
+}
+
+.color-powder {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  opacity: 0;
+  animation: holiBurst 1s ease-out infinite;
+}
+
+    
+  </style>
+  </style>
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay loop muted>
+          <source src="playvideo.mp4" type="video/mp4">
+          
+        </video>
+      </div>
+
+      <!-- Animated Heading -->
+  <h1 class="animated-heading">RENEE</h1>
+     <p>Find Your Parfect Match</p>
+  
+
+  <!-- Header Section -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#shop">Shopping</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#" onclick="showOffer()">🎉 Special Offer</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Slideshow Section -->
+  <div class="slideshow-container">
+    <div class="slide fade">
+      <img src="slied1.jpg" alt="Slide 1">
+      <div class="text">New shades</div>
+    </div>
+    
+    <div class="slide fade">
+      <img src="slied2.jpg" alt="Slide 2">
+      <div class="text">Free Shipping!!</div>
+    </div>
+    
+    <div class="slide fade">
+      <img src="slied4.jpg" alt="Slide 3">
+      <div class="text">New collection
+
+      </div>
+    </div>
+  
+    <!-- Navigation Buttons -->
+    <a class="prev" onclick="changeSlide(-1)">❮</a>
+    <a class="next" onclick="changeSlide(1)">❯</a>
+  
+    <!-- Pagination Dots -->
+    <div class="dots-container">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+  </div>
+  
+ <!-- Shop Section -->
+ <section id="shop">
+  <h2>Shop Our Collection</h2>
+  <div class="product-container">
+      <div class="product-card">
+          <img src="lipstick1.webp" alt="Lipstick Shade 1">
+          <h3>Matte Red Lipstick</h3>
+          <p>₹499</p>
+          <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+          <img src="lipstick2.webp" alt="Lipstick Shade 2">
+          <h3>Glossy Pink Lipstick</h3>
+          <p>₹599</p>
+          <button class="add-to-cart">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+          <img src="lipstick3.webp" alt="Lipstick Shade 3">
+          <h3>Nude Brown Lipstick</h3>
+          <p>₹549</p>
+          <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="lipstick4.webp" alt="Lipstick Shade 3">
+        <h3>Nude  Lipstick</h3>
+        <p>₹549</p>
+        <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+    </div>
+    <div id="offerBox" class="offer-box">
+      <div class="offer-content">
+        <h2>Holi Special Offer! </h2>
+        <p>Enjoy <strong>50% OFF</strong> on all lipsticks this Holi!</p>
+        <button onclick="hideOffer()">Close</button>
+      </div>
+      <div class="holi-animation"></div> <!-- Animation container -->
+    </div>
+    
+  </section>
+  
+      
+<!-- About Us Section with Counter -->
+  <section id="about" class="about-box">
+    <h2>About Us</h2>
+    <p>We offer clean, cruelty-free beauty products crafted for Indian skin tones. Explore our range and fall in love with makeup that enhances your natural beauty.</p>
+    <div class="counter" id="shadeCounter">0+</div>
+    <p>shade available</p>
+    <div class="stars"></div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <!-- Contact Us Section -->
+  <section id="contact" class="contact-box">
+    <h2>Contact Us</h2>
+    <p>Feel free to reach out for inquiries, feedback, or customer support. We are here to help you!
+        contact: RENEE@12gmail.com
+    </p>
+  </section>
+
+<!-- Chatbox Container -->
+<div class="chatbox">
+    <div class="chatbox-header" onclick="toggleChatbox()">
+      Chat with Us 💬
+    </div>
+    <div class="chatbox-body">
+      <div class="messages" id="messages"></div>
+    </div>
+    <div class="chatbox-footer">
+      <input type="text" id="chatInput" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+  
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 RENEE Lipstick. All Rights Reserved.</p>
+    <div class="socials">
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+    </div>
+  </footer>
+
+  <!-- JavaScript for slideshow -->
+  <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Smooth Scroll to Shop Section
+    document.querySelector('a[href="#shop"]').addEventListener("click", function (e) {
+        e.preventDefault();
+        document.getElementById("shop").scrollIntoView({ behavior: "smooth" });
+    });
+
+    // Slideshow
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("slide");
+        let dots = document.getElementsByClassName("dot");
+
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1; }
+
+        slides[slideIndex - 1].style.display = "block";
+
+        for (let i = 0; i < dots.length; i++) {
+            dots[i].classList.remove("active");
+        }
+        dots[slideIndex - 1].classList.add("active");
+
+        setTimeout(showSlides, 3000); // Auto change every 3 seconds
+    }
+
+    // Manual Slide Change
+    window.changeSlide = function (n) {
+        slideIndex += n - 1;
+        showSlides();
+    };
+
+    // Jump to Specific Slide
+    window.currentSlide = function (n) {
+        slideIndex = n - 1;
+        showSlides();
+    };
+
+    // Generate stars in About Us section
+    const starsContainer = document.querySelector(".stars");
+    if (starsContainer) {
+        for (let i = 0; i < 15; i++) {
+            let star = document.createElement("div");
+            star.classList.add("star");
+            star.style.left = Math.random() * 100 + "%";
+            star.style.top = Math.random() * 100 + "%";
+            star.style.animationDelay = Math.random() * 2 + "s";
+            starsContainer.appendChild(star);
+        }
+    }
+
+    // Counter Animation for About Us Shades
+    function animateCount(id, target) {
+        let count = 0;
+        let speed = Math.ceil(target / 100);
+        let counterElement = document.getElementById(id);
+        if (!counterElement) return;
+
+        let interval = setInterval(() => {
+            count += speed;
+            if (count >= target) {
+                count = target;
+                clearInterval(interval);
+            }
+            counterElement.innerText = count + "+";
+        }, 20);
+    }
+
+    animateCount("shadeCounter", 100);
+
+    // Chatbox Toggle
+    window.toggleChatbox = function () {
+        document.querySelector('.chatbox').classList.toggle('open');
+    };
+
+    window.sendMessage = function () {
+        let input = document.getElementById('chatInput');
+        let message = input.value.trim();
+        if (message === '') return;
+
+        let chatBox = document.getElementById('messages');
+        let newMessage = document.createElement('div');
+        newMessage.classList.add('message', 'user-message');
+        newMessage.textContent = message;
+        chatBox.appendChild(newMessage);
+
+        input.value = '';
+        chatBox.scrollTop = chatBox.scrollHeight; // Auto-scroll
+    };
+
+    // Send message when Enter key is pressed
+    window.handleKeyPress = function (event) {
+        if (event.key === "Enter") {
+            sendMessage();
+        }
+    };
+
+    // Special Holi Offer
+    window.showOffer = function () {
+        document.getElementById("offerBox").classList.add("active");
+        createHoliEffect();
+    };
+
+    window.hideOffer = function () {
+        document.getElementById("offerBox").classList.remove("active");
+    };
+
+    // Generate Holi Color Burst Effect
+    function createHoliEffect() {
+        let holiContainer = document.querySelector(".holi-animation");
+        if (!holiContainer) return;
+
+        holiContainer.innerHTML = ""; // Clear previous effects
+
+        for (let i = 0; i < 10; i++) {
+            let colors = ["red", "blue", "yellow", "green", "pink", "orange"];
+            let color = colors[Math.floor(Math.random() * colors.length)];
+            let particle = document.createElement("div");
+            particle.classList.add("color-powder");
+            particle.style.backgroundColor = color;
+            particle.style.left = Math.random() * 100 + "%";
+            particle.style.top = Math.random() * 100 + "%";
+            particle.style.animationDelay = Math.random() + "s";
+            holiContainer.appendChild(particle);
+        }
+    }
+
+    // Fade-in & Slide-in Product Cards in Shop Section
+    const shopSection = document.getElementById("shop");
+    const productCards = document.querySelectorAll(".product-card");
+
+    function fadeInShop() {
+        const shopPosition = shopSection.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+
+        if (shopPosition < screenPosition) {
+            shopSection.classList.add("fade-in");
+        }
+    }
+
+    function slideInProducts() {
+        productCards.forEach((card, index) => {
+            const cardPosition = card.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
+
+            if (cardPosition < screenPosition) {
+                card.style.animation = `slideIn 0.5s ease-out ${index * 0.2}s forwards`;
+            }
+        });
+    }
+
+    // Event Listener for Scroll
+    window.addEventListener("scroll", () => {
+        fadeInShop();
+        slideInProducts();
+    });
+
+    // Initial Check on Load
+    fadeInShop();
+    slideInProducts();
+});
+
+
+    
+  </script>
+</body>
+</html>
